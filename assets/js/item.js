@@ -36,7 +36,7 @@ h1.innerText = `this is the id of the item: ${itemID}`;
 loadItem();
 async function loadItem(){
     try {
-        const res = await fetch(`http://localhost:3000/anime/details/${itemID}`);
+        const res = await fetch(`https://anime-array.vercel.app/anime/details/${itemID}`);
         const data = await res.json();
         const anime = data.data;
 

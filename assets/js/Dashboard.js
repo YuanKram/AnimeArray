@@ -269,20 +269,20 @@ async function loadPage() {
         header.innerText = pageState.genre[0].toUpperCase()+pageState.genre.slice(1)+" Anime List";
         btn_txtTop.innerText = "Featured List";
         animfilter.style.display = "block";
-        return fetch(`http://localhost:3000/api/animes?genres=${pageState.genre}&page=${page}&order=${pageState.orderFilter}`);
+        return fetch(`https://anime-array.vercel.app/api/animes?genres=${pageState.genre}&page=${page}&order=${pageState.orderFilter}`);
 
       //search page
       case "searchPage":
         header.innerText = "Search Anime";
         btn_txtTop.innerText = "Featured List";
         searchResult();
-        return fetch(`http://localhost:3000/api/animes?q=${pageState.search}&page=${page}&order=${pageState.orderFilter}`)
+        return fetch(`https://anime-array.vercel.app/api/animes?q=${pageState.search}&page=${page}&order=${pageState.orderFilter}`)
 
       //search and genre
       case "genreSearchPage":
         btn_txtTop.innerText = "Featured List";
         searchResult();
-        return fetch(`http://localhost:3000/api/animes?q=${pageState.search}&genres=${pageState.genre}&page=${page}&order=${pageState.orderFilter}`)
+        return fetch(`https://anime-array.vercel.app/api/animes?q=${pageState.search}&genres=${pageState.genre}&page=${page}&order=${pageState.orderFilter}`)
 
       //default page
       default:
@@ -290,7 +290,7 @@ async function loadPage() {
         if(mainContent.querySelector(".search-result")) mainContent.removeChild(mainContent.querySelector(".search-result"));
         searchField.value = "";
         animfilter.style.display = "none";
-        return fetch(`http://localhost:3000/api/animes/featured?page=${page}&filter=${pageState.topFilter.value}`,{method: 'GET'});
+        return fetch(`https://anime-array.vercel.app/api/animes/featured?page=${page}&filter=${pageState.topFilter.value}`,{method: 'GET'});
     }
   }
 
