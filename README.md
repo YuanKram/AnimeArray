@@ -1,21 +1,20 @@
-ReadMe file for the AnimeArray Personal Project Website by YuanKram 
-github profile: https://github.com/YuanKram
+ReadMe file for the AnimeArray Personal Project Website by YuanKram
 
 This is a Interactive Anime Listing Website and my very first project using APIs and Node.js w/ Express.js
-showcasing features such as:
-Filter anime list by categories or genres
-Search anime by title
-Paginate through anime lists for easier browsing
-Browse Each anime description in its own page.
-Fully responsive and clean UI design
+*showcasing features such as:
+*Filter anime list by categories or genres
+*Search anime by title
+*Paginate through anime lists for easier browsing
+*Browse Each anime description in its own page.
+*Fully responsive and clean UI design
 
 
 Tools used:
-Vanilla JavaScript - for client side interactivity
-Node.js + Express.js framework - for backend requests and response
-JikanApi - for Anime API library
-Figma - for planning website designs, assets creation
-FontAwesome - for free vector icons
+*Vanilla JavaScript - for client side interactivity
+*Node.js + Express.js framework - for backend requests and response
+*JikanApi - for Anime API library
+*Figma - for planning website designs, assets creation
+*FontAwesome - for free vector icons
 
 primary goal for this personal project:
 Create modern design website for returning lists of animes with filtering functionalities
