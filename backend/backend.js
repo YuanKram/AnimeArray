@@ -244,7 +244,7 @@ app.get("/anime/details/:id",async (req, res)=>{
   res.json(cacheData); //returning from cache
   });
 
-
-app.listen(3000, ()=>{ console.log("Listening at port 3000...")})
+const port = process.env.PORT || 3000;
+app.listen(port, ()=>{ console.log(`Backend running at port: ${port}`)});
 
 
