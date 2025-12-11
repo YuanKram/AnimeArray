@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Array</title>
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+     <header class="navbar">
+        <ul class="navbar-items">
+            <li class="navbar-logo"> 
+                <div class="menu">
+                    <div class="container">
+                        <img class="logo" src="./assets/images/Logo.svg" alt="Website Logo">
+                        <div class="img-cover toggle"></div>
+                    </div>
+                    <div class="dropdown">
+                        <img class="dropdown-btn" src="./assets/images/drop-downblack.svg" data-dark="./assets/images/drop-downwhite.svg" data-light="./assets/images/drop-downblack.svg" alt="">
+                        <div class="dropdown-content">
+                            <ul class="dropdown-list toggle">
+                                <li class="dropdown-item toggle about">
+                                    <div class="item-container about">
+                                        <img src="./assets/images/aboutlight.svg" data-dark="./assets/images/aboutdark.svg" data-light="./assets/images/aboutlight.svg" alt=""><a class="toggle" href="#">About</a>
+                                    </div>
+                            
+                                </li>
+
+                                <li class="dropdown-item toggle git">
+                                    <div class="item-container git">
+                                        <img src="./assets/images/gitwhite.svg" data-dark="./assets/images/gitdark1.svg" data-light="./assets/images/gitwhite.svg"  alt=""><a class="toggle" href="#">Github</a>
+                                    </div>
+                                    
+                                </li>
+
+                                <li class="dropdown-item toggle acc">
+                                    <div class="item-container acc">
+                                        <img src="./assets/images/acclight.svg" data-dark="./assets/images/accdark.svg" data-light="./assets/images/acclight.svg" alt=""><a class="toggle" href="#">Account</a>
+                                    </div>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </li>
+
+            <!-- Search Bar -->
+            <li class="navbar-searchbar">
+                <div class="search-container toggle">
+                    <img src="./assets/images/magnifying-glass-solid-full.svg" data-dark="./assets/images/search-dark-mode.svg" data-light="./assets/images/magnifying-glass-solid-full.svg" alt="search icon" class="search-icon"> 
+                    <input class="search-bar toggle" id="search-anime" type="text" placeholder="Search anime..." autocomplete="off">
+                </div>
+                 
+            </li>
+
+            <!-- Toggle -->
+            <li class="navbar-toggle"> 
+                <div class="toggle-container">
+                    <img class="toggle-btn" src="./assets/images/toggle-off-solid-full.svg" alt="dark mode toggle">
+                    <p class="dark-modetxt">Dark Mode</p>
+                </div>
+                
+            </li>
+        </ul>
+     </header>
+
+     <!-- Main Content -->
+     <main class="main">
+        <!-- Side Bar: Genres -->
+        <div class="side-bar">
+            <h2 class="side-header">Genres</h2>
+            <ul class="tags hover">
+                <li class="tags-btn vanilla hover" id="action" data-value="action"><img src="https://cdn.myanimelist.net/images/anime/10/47347.jpg" alt="action-anime"><p>Action</p></li>
+                <li class="tags-btn vanilla hover" id="adventure" data-value="adventure"><img src="https://cdn.myanimelist.net/images/anime/1244/138851.jpg" alt="adventure-anime"> <p>Adventure</p></li>
+                <li class="tags-btn vanilla hover" id="fantasy" data-value="fantasy"><img src="https://cdn.myanimelist.net/images/anime/11/39717.jpg" alt="fantasy-anime"> <p>Fantasy</p></li>
+                <li class="tags-btn vanilla hover" id="romance" data-value="romance"><img src="https://cdn.myanimelist.net/images/anime/1295/106551.jpg" alt="romance-anime"> <p>Romance</p></li>
+                <li class="tags-btn vanilla hover" id="sliceOL" data-value="slice of life"><img src="https://cdn.myanimelist.net/images/anime/13/50521.jpg" alt="sliceoflife-anime"> <p>Slice of Life</p></li>
+                <li class="tags-btn vanilla hover" id="mystery" data-value="mystery"><img src="https://cdn.myanimelist.net/images/anime/10/77957.jpg" alt="mystery-anime"> <p>Mystery</p></li>
+                <li class="tags-btn vanilla hover" id="sci-fi" data-value="sci-fi"><img src="https://cdn.myanimelist.net/images/anime/1613/102576.jpg" alt="sci-fi-anime"> <p>Sci-fi</p></li>
+                <li class="tags-btn vanilla hover" id="horror" data-value="horror"><img src="https://cdn.myanimelist.net/images/anime/1498/134443.jpg" alt="horror-anime"> <p>Horror</p></li>
+                <li class="moreBtn hover"><p>See more tags +</p>
+                <li class="tags-btn vanilla hover more-tags" id="comedy" data-value="comedy"><img src="https://cdn.myanimelist.net/images/anime/1895/142748.jpg" alt="comedy-anime"><p>Comedy</p></li>
+                <li class="tags-btn vanilla hover more-tags" id="drama" data-value="drama"><img src="https://cdn.myanimelist.net/images/anime/1122/96435.jpg" alt="drama-anime"><p>Drama</p></li>
+                <li class="tags-btn vanilla hover more-tags" id="sports" data-value="sports"><img src="https://cdn.myanimelist.net/images/anime/12/86890.jpg" alt="sports-anime"><p>Sports</p></li>
+                <li class="tags-btn vanilla hover more-tags" id="mecha" data-value="mecha"><img src="https://cdn.myanimelist.net/images/anime/1032/135088.jpg" alt="mecha-anime"><p>Mecha</p></li>
+                    
+                </li>
+            </ul>
+        </div>
+
+        <!-- Anime Lists -->
+        <div class="content">
+            <h1 class="body-header"> Seasonal Anime List </h1>
+
+            <!-- Anime Filters -->
+            <div class="filters">
+                    <div class="select top" id="filter-top">
+                        <button class="select-btn top toggle"><span class="btn-top">Featured List</span><img src="./assets/images/drop-downblack.svg" data-dark="./assets/images/drop-downwhite.svg" data-light="./assets/images/drop-downblack.svg" alt=""></button>
+
+                        <div class="dropdown-menu top toggle">
+                            <div class="dropdown-item top toggle" data-value="topAnime" data-name="Top Anime">Top Anime</div>
+                            <div class="dropdown-item top toggle" data-value="seasonalAnime" data-name="Seasonal Anime">Seasonal Anime</div>
+                            <!-- <div class="dropdown-item top toggle" data-value="latestAnime" data-name="Latest Updated Anime">Latest Updated Anime</div> -->
+                        </div>
+                    </div>
+
+                    <div class="select order" id="orderByDropdown">
+                        <button class="select-btn order toggle"><span class="btn-order">Order by: Popularity</span> <img src="./assets/images/drop-downblack.svg" data-dark="./assets/images/drop-downwhite.svg" data-light="./assets/images/drop-downblack.svg" alt=""></button>
+
+                        <div class="dropdown-menu order toggle">
+                            <div class="dropdown-item order toggle" data-value="popularity" data-name="Popularity">Popularity</div>
+                            <div class="dropdown-item order toggle" data-value="rank" data-name="Rank">Rank</div>
+                            <div class="dropdown-item order toggle" data-value="title" data-name="Title">Title</div>
+                            <div class="dropdown-item order toggle" data-value="episodes" data-name="Episodes">Episodes</div>
+                            <div class="dropdown-item order toggle" data-value="start_date" data-name="Start date">Start date</div>
+                            <div class="dropdown-item order toggle" data-value="end_date" data-name="End Date">End date</div>
+                        </div>
+                    </div>
+
+                    <div class="pagination top">
+                        <a href="#" class="prevpgBtn top"><img src="./assets/images/back-black.svg" data-dark="./assets/images/back-white.svg" data-light="./assets/images/back-black.svg" alt="next page button"></a>
+                        <p class="page-number top">1</p>
+                        <a href="#" class="nextpgBtn top"><img src="./assets/images/next-black.svg" data-dark="./assets/images/next-white.svg" data-light="./assets/images/next-black.svg" alt="previous page button"></a>
+                    </div>
+            </div>
+
+            <!-- Anime Cards List -->
+            <div class="list toggle">
+                <!-- anime card template:
+                <div class="list-item">
+                    <div class="image-wrapper">
+                        <img class="bookmark-btn" src="./assets/images/bookdark.svg" alt="bookmark logo">
+                        <img class="item-img" src="./assets/images/Logo.svg" alt="item-picture">
+                        
+                    </div>
+                    
+                    <div class="details">
+                        <ul>
+                            <li class="anime-title">[Title]</li>
+                            <li class="anime-episodes">[Episodes]</li>
+                            <li class="anime-status">[Status]</li>
+                            <li class="anime-genre">[Genres]</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                -->
+
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="prevpgBtn"><img src="./assets/images/back-black.svg" data-dark="./assets/images/back-white.svg" data-light="./assets/images/back-black.svg" alt="next page button"></a>
+                <p class="page-number">1</p>
+                <a href="#" class="nextpgBtn"><img src="./assets/images/next-black.svg" data-dark="./assets/images/next-white.svg" data-light="./assets/images/next-black.svg" alt="previous page button"></a>
+            </div>
+
+        </div>
+
+        
+
+
+
+     </main>
+
+     <!-- footer -->
+    <footer>
+        <div class="footer-content">
+            <section class="footer-links">
+                <div class="footer-logo">
+                    <img src="./assets/images/Logo.svg" alt="">
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Yuancruz.01122334455/" target="_blank"><img src="./assets/images/faceshadow.svg" data-dark="./assets/images/facelight.svg" data-light="./assets/images/faceshadow.svg" alt=""></a>
+                    <a href="linkedin.com" target="_blank"><img src="./assets/images/linkshadow.svg" data-dark="./assets/images/linklight.svg" data-light="./assets/images/linkshadow.svg" alt=""></a>
+                    <a href="https://github.com/YuanKram" target="_blank"><img src="./assets/images/gitshadow.svg" data-dark="./assets/images/gitlight.svg" data-light="./assets/images/gitshadow.svg" alt=""></a>
+                    
+                    
+                </div>
+            </section>
+            <hr class="footer-line">
+
+            <section class="footer-copyright">
+                <p>Copyright © YuanKram Projects 2025</p>
+
+                <a  class="topbutton toggle" href="#">
+                    <p>Back to top</p>
+                    <img src="./assets/images/updark.svg" data-dark="./assets/images/uplight.svg" data-light="./assets/images/updark.svg" alt="">
+                </a>
+            </section>
+            
+            
+        </div>
+    </footer>
+
+</body>
+<script src="./assets/js/Dashboard.js"></script>
+</html>
