@@ -6,7 +6,7 @@ const NodeCache = require('node-cache');
 
 const app = express();
 app.use(cors({
-  origin: 'http://127.0.0.1:5500'
+  origin: 'https://yuankram.github.io/'
 }));
 
 //request rate limit for seconds, max 3 request per second 
