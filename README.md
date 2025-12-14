@@ -1,7 +1,8 @@
 ReadMe file for the AnimeArray Personal Project Website by YuanKram
 
 Live Demo: https://yuankram.github.io/AnimeArray/
-Frontend Hosted in Github Pages ; Backend hosted on Vercel
+
+Frontend Hosted on Github Pages ; Backend hosted on Vercel
 
 This is a Interactive Anime Listing Website and my very first project using APIs and Node.js w/ Express.js
 *showcasing features such as:
